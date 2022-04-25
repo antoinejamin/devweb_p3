@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/styles.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinejamin/devweb_p3/"
+  },
+  "author": "antoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinejamin/devweb_p3/maintainable-css-with-sass/issues"
+  },
+  "homepage": "https://github.com/antoinejamin/devweb_p3/",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}

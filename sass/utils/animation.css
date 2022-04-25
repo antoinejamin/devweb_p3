@@ -1,0 +1,136 @@
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  background-color: #f6f6f6;
+  height: 100vh;
+  opacity: 0.9;
+  inset: 0;
+  z-index: 2;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-name: loaderanim;
+          animation-name: loaderanim;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+
+.loader__spin::after {
+  content: "";
+  position: fixed;
+}
+
+.loader__spin {
+  font-size: 3.2rem;
+  -webkit-animation: spin 3s infinite;
+          animation: spin 3s infinite;
+  color: #9356dc;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loaderanim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderanim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.menu__carte:hover .menu__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0;
+  -webkit-transition: margin-right 2s;
+  transition: margin-right 2s;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+.menu__carte:hover .menu__check .i {
+  -webkit-animation: spin-check 2s linear;
+          animation: spin-check 2s linear;
+}
+
+@-webkit-keyframes spin-check {
+  from {
+    -webkit-transform: rotate(-280deg);
+            transform: rotate(-280deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes spin-check {
+  from {
+    -webkit-transform: rotate(-280deg);
+            transform: rotate(-280deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes apparition {
+  from {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  from {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=animation.css.map */

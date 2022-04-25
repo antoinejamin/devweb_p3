@@ -1,0 +1,14 @@
+@mixin flexbox-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow-top {
+  box-shadow: inset 0px 6px 5px 0px rgb(0 0 0 / 20%);
+}
+
+@mixin box-shadow{
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%)
+}

@@ -1,0 +1,73 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #f6f6f6;
+  height: 100vh;
+  opacity: 0.9;
+  inset: 0;
+  z-index: 2;
+  transform-origin: top;
+  animation-name: loaderanim;
+  animation-delay: 2s;
+
+  animation-duration: 0.7s;
+
+  &__spin::after {
+    content: "";
+    position: fixed;
+  }
+  &__spin {
+    font-size: 3.2rem;
+    animation: spin 3s infinite;
+    color: #9356dc;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderanim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.menu {
+  &__carte {
+    &:hover .menu__check {
+      display: flex;
+      margin-right: 0;
+      transition: margin-right 2s;
+      transition-duration: 3s;
+      & .i {
+        animation: spin-check 2s linear;
+      }
+    }
+  }
+  @keyframes spin-check {
+    from {
+      transform: rotate(-280deg);
+    }
+    to {
+      transform: rotate(0);
+    }
+  }
+  @keyframes apparition {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

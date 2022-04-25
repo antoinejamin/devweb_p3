@@ -1,0 +1,36 @@
+.footer {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  width: 100%;
+  a {
+    color: white;
+  }
+  &__bloc{
+    margin: 0px 23px;
+  }
+
+  &__bloc-link {
+    display: inline-flex;
+   
+    align-items: center;
+   
+    display: flex;
+    text-align: center;
+
+    flex-direction: row;
+    color: white;
+    
+    height: 30px;
+  }
+
+  .logo {
+    font-family: "shrikhand", sans-serif;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+h3 {
+  font-weight: bold;
+  font-size: medium;
+  margin: 12px 6px;
+}

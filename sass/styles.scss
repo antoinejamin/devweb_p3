@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./utils/animation";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/container";
+@import "./layout/form";
