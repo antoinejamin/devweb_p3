@@ -5,21 +5,16 @@
   a {
     color: white;
   }
-  &__bloc{
+  &__bloc {
     margin: 0px 23px;
   }
 
   &__bloc-link {
-    display: inline-flex;
-   
     align-items: center;
-   
     display: flex;
     text-align: center;
-
     flex-direction: row;
     color: white;
-    
     height: 30px;
   }
 

@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 h1 {
   font-family: "Shrikhand";
   text-align: center;
@@ -6,7 +11,22 @@ h1 {
   background-color: white;
 }
 .titre-page {
+  justify-content: center;
+}
+
+*a {
+  text-decoration: none;
+}
+
+.header_page {
   display: flex;
-  justify-content: space-evenly;
-  margin-left: -156px;
+  justify-content: center;
+  background-color: white;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 35px;
+  top: 2%;
+  font-size: 20px;
 }

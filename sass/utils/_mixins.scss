@@ -9,6 +9,42 @@
   box-shadow: inset 0px 6px 5px 0px rgb(0 0 0 / 20%);
 }
 
-@mixin box-shadow{
-  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%)
+@mixin box-shadow {
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
+}
+
+@mixin heart-transition {
+  .heart-transition {
+    position: relative;
+    .far {
+      top: 0;
+      right: 0;
+      font-size: 1.7rem;
+      position: absolute;
+      margin: 20px 40px;
+    }
+    .fas {
+      top: 0;
+      right: 0;
+      position: absolute;
+      margin: 20px 40px;
+      font-size: 1.7rem;
+
+      color: transparent;
+      background-image: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+    }
+    &:hover .fas {
+      opacity: 1;
+      transform: scale(1.2);
+      transition-delay: 200ms;
+      transition-duration: 1s;
+    }
+    &:hover .far {
+      opacity: 0;
+      transition-duration: 300ms;
+    }
+  }
 }

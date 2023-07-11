@@ -10,18 +10,11 @@
           align-items: center;
   position: fixed;
   background-color: #f6f6f6;
-  height: 100vh;
-  opacity: 0.9;
+  opacity: 0;
   inset: 0;
-  z-index: 2;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation-name: loaderanim;
-          animation-name: loaderanim;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  z-index: -1;
+  -webkit-animation: loaderanim 1s;
+          animation: loaderanim 1s;
 }
 
 .loader__spin::after {
@@ -51,22 +44,26 @@
 }
 
 @-webkit-keyframes loaderanim {
-  from {
-    opacity: 1;
+  0%,
+  99% {
+    opacity: 0.9;
+    z-index: 99;
   }
-  to {
+  100% {
     opacity: 0;
-    visibility: hidden;
+    z-index: -1;
   }
 }
 
 @keyframes loaderanim {
-  from {
-    opacity: 1;
+  0%,
+  99% {
+    opacity: 0.9;
+    z-index: 99;
   }
-  to {
+  100% {
     opacity: 0;
-    visibility: hidden;
+    z-index: -1;
   }
 }
 
@@ -74,16 +71,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   margin-right: 0;
   -webkit-transition: margin-right 2s;
   transition: margin-right 2s;
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-.menu__carte:hover .menu__check .i {
-  -webkit-animation: spin-check 2s linear;
-          animation: spin-check 2s linear;
+.menu__carte:hover i {
+  -webkit-animation: spin-check 1s ease;
+          animation: spin-check 1s ease;
 }
 
 @-webkit-keyframes spin-check {

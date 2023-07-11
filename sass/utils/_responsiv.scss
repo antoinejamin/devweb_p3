@@ -25,13 +25,6 @@
       width: 30%;
       margin: 20px;
     }
-    /*test ellipsis sur carte menu*/
-    &__description {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    /*echec du test*/
   }
   .footer {
     &__bloc-links {

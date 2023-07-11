@@ -9,8 +9,8 @@
   width: 100%;
   object-fit: cover;
   background-size: cover;
-  border-top-left-radius: 7%;
-  border-top-right-radius: 7%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .restaurant__card-new {
@@ -43,5 +43,6 @@
 
 .img__image {
   width: 100%;
-  height: 100%;
+  height: 50vh;
+  object-fit: cover;
 }

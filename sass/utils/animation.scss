@@ -4,15 +4,11 @@
   align-items: center;
   position: fixed;
   background-color: #f6f6f6;
-  height: 100vh;
-  opacity: 0.9;
+  opacity: 0;
   inset: 0;
-  z-index: 2;
-  transform-origin: top;
-  animation-name: loaderanim;
-  animation-delay: 2s;
+  z-index: -1;
 
-  animation-duration: 0.7s;
+  animation: loaderanim 1s;
 
   &__spin::after {
     content: "";
@@ -31,12 +27,14 @@
   }
 }
 @keyframes loaderanim {
-  from {
-    opacity: 1;
+  0%,
+  99% {
+    opacity: 0.9;
+    z-index: 99;
   }
-  to {
+  100% {
     opacity: 0;
-    visibility: hidden;
+    z-index: -1;
   }
 }
 
@@ -44,12 +42,13 @@
   &__carte {
     &:hover .menu__check {
       display: flex;
+      transform: translateX(0);
       margin-right: 0;
       transition: margin-right 2s;
-      transition-duration: 3s;
-      & .i {
-        animation: spin-check 2s linear;
-      }
+      transition-duration: 1s;
+    }
+    &:hover i {
+      animation: spin-check 1s ease;
     }
   }
   @keyframes spin-check {
@@ -71,3 +70,5 @@
     }
   }
 }
+
+
